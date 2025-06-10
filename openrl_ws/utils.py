@@ -2,7 +2,10 @@
 from __future__ import print_function, division, absolute_import
 
 from typing import Any, Dict, Optional, Union
-import isaacgym
+try:
+    import isaacgym
+except ImportError:
+    import omni.isaac.lab as isaacgym
 
 import numpy as np
 import torch
@@ -12,7 +15,7 @@ from gym import spaces
 from mqe.envs.utils import make_mqe_env
 
 from openrl.configs.config import create_config_parser
-from isaacgym import gymutil
+from mqe.utils.isaac_import import gymutil
 from typing import List
 from openrl.configs.utils import ProcessYamlAction
 

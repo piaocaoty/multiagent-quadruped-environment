@@ -2,7 +2,10 @@ import numpy as np
 from numpy.random import choice
 from scipy import interpolate
 
-from isaacgym import terrain_utils, gymapi
+try:
+    from isaacgym import terrain_utils, gymapi
+except ImportError:
+    from omni.isaac.lab import terrain_utils, gymapi
 
 import matplotlib.pyplot as plt
 

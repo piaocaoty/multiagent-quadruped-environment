@@ -1,4 +1,4 @@
-from isaacgym import gymtorch
+from mqe.utils.isaac_import import gymtorch
 import gym
 from gym import spaces
 import numpy

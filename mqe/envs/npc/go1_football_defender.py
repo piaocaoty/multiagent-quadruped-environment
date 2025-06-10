@@ -2,8 +2,11 @@
 from mqe import LEGGED_GYM_ROOT_DIR
 import os
 
-from isaacgym.torch_utils import *
-from isaacgym import gymtorch, gymapi, gymutil
+try:
+    from isaacgym.torch_utils import *
+except ImportError:
+    from omni.isaac.lab.torch_utils import *
+from mqe.utils.isaac_import import gymtorch, gymapi, gymutil
 
 import torch
 
