@@ -5,7 +5,10 @@ import torch
 from copy import copy
 from mqe.envs.wrappers.empty_wrapper import EmptyWrapper
 
-from isaacgym.torch_utils import *
+try:
+    from isaacgym.torch_utils import *
+except ImportError:
+    from omni.isaac.lab.torch_utils import *
 
 class Go1PushboxWrapper(EmptyWrapper):
     def __init__(self, env):

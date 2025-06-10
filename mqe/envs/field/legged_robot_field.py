@@ -1,8 +1,11 @@
 from collections import OrderedDict, defaultdict
 import itertools
 import numpy as np
-from isaacgym.torch_utils import torch_rand_float, get_euler_xyz, quat_from_euler_xyz, tf_apply
-from isaacgym import gymtorch, gymapi, gymutil
+try:
+    from isaacgym.torch_utils import torch_rand_float, get_euler_xyz, quat_from_euler_xyz, tf_apply
+except ImportError:
+    from omni.isaac.lab.torch_utils import torch_rand_float, get_euler_xyz, quat_from_euler_xyz, tf_apply
+from mqe.utils.isaac_import import gymtorch, gymapi, gymutil
 import torch
 
 from mqe.envs.base.legged_robot import LeggedRobot

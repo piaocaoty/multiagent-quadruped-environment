@@ -7,6 +7,8 @@ Multi-agent Quadruped Environment(MQE) is a multi-functional and easy-to-use qua
 * Build your terrain from blocks like LEGO.
 * Click-to-use RL pipeline through [OpenRL](https://github.com/OpenRL-Lab/openrl) on pre-defined cooperative and competitive tasks.
 
+The environment can be used with either **Isaac Gym** or **Isaac Lab**. A basic configuration for the Unitree **GO2** robot is also provided alongside the original GO1 support.
+
 ## Useful Links ##
 
 Project Website: https://ziyanx02.github.io/multiagent-quadruped-environment/
@@ -18,13 +20,14 @@ Paper: https://arxiv.org/abs/2403.16015
     ```
     conda create -n mqe python=3.8
     ```
-2. Install PyTorch and Isaac Gym.
+2. Install PyTorch and Isaac Gym (or Isaac Lab).
     - Install appropriate PyTorch version from https://pytorch.org/.
         ```
         pip3 install torch==1.10.0+cu113 torchvision==0.11.1+cu113 torchaudio==0.10.0+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
         ```
-    - Download and install Isaac Gym Preview 4 from https://developer.nvidia.com/isaac-gym. Ubuntu20.04 and Python3.8 recommended.
-        ```
+    - Download and install Isaac Gym Preview 4 from https://developer.nvidia.com/isaac-gym.
+      Alternatively, install [Isaac Lab](https://github.com/NVIDIA-Omniverse/IsaacLab) if you prefer using Isaac Sim.
+      ```
         tar -xf IsaacGym_Preview_4_Package.tar.gz
         cd isaacgym/python && pip install -e .
         ```

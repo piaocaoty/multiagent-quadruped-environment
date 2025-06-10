@@ -15,12 +15,12 @@ from copy import copy
 from mqe import LEGGED_GYM_ROOT_DIR, envs
 from mqe.envs.base.legged_robot import LeggedRobot
 from mqe.envs.field.legged_robot_field import LeggedRobotField
-from mqe.envs.go1.go1_config import Go1Cfg
+from mqe.envs.go2.go2_config import Go2Cfg
 from mqe.utils.math import quat_apply_yaw, wrap_to_pi, torch_rand_sqrt_float
 from mqe.utils.helpers import class_to_dict
 
-class Go1(LeggedRobotField):
-    def __init__(self, cfg: Go1Cfg, sim_params, physics_engine, sim_device, headless):
+class Go2(LeggedRobotField):
+    def __init__(self, cfg: Go2Cfg, sim_params, physics_engine, sim_device, headless):
 
         self.cfg = cfg
         self.env_name = cfg.env.env_name

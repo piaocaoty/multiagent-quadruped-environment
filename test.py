@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 import imageio
-import isaacgym
+from mqe.utils.isaac_import import gymapi
 from mqe.utils import get_args
 import torch
 

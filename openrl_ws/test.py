@@ -1,4 +1,4 @@
-import isaacgym
+from mqe.utils.isaac_import import gymapi
 from openrl_ws.utils import make_env, get_args, custom_cfg, MATWrapper
 
 from openrl.envs.common import make

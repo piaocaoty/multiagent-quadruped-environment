@@ -2,7 +2,7 @@
 from __future__ import print_function, division, absolute_import
 
 from typing import Any, Dict, Optional, Union
-import isaacgym
+from mqe.utils.isaac_import import gymapi, gymutil
 
 import numpy as np
 import torch
@@ -12,7 +12,7 @@ from gym import spaces
 from mqe.envs.utils import make_mqe_env
 
 from openrl.configs.config import create_config_parser
-from isaacgym import gymutil
+from mqe.utils.isaac_import import gymutil
 from typing import List
 from openrl.configs.utils import ProcessYamlAction
 
@@ -22,8 +22,8 @@ import numpy as np
 import argparse
 from bisect import bisect
 
-from isaacgym import gymapi
-from isaacgym.gymutil import parse_device_str
+from mqe.utils.isaac_import import gymapi, gymutil
+parse_device_str = gymutil.parse_device_str
 
 from mqe.envs.go1.go1_config import Go1Cfg
 from openrl.envs.vec_env import BaseVecEnv

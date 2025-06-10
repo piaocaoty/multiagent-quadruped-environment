@@ -2,8 +2,11 @@ import numpy as np
 import torch
 from copy import copy
 
-from isaacgym import gymapi, gymutil
-from isaacgym.terrain_utils import convert_heightfield_to_trimesh
+from mqe.utils.isaac_import import gymapi, gymutil
+try:
+    from isaacgym.terrain_utils import convert_heightfield_to_trimesh
+except ImportError:
+    from omni.isaac.lab.terrain_utils import convert_heightfield_to_trimesh
 from mqe.utils import trimesh
 from mqe.utils.terrain.perlin import TerrainPerlin
 from mqe.utils.console import colorize
