@@ -1,6 +1,7 @@
 # environments
 from mqe.envs.field.legged_robot_field import LeggedRobotField
 from mqe.envs.go1.go1 import Go1
+from mqe.envs.go2.go2 import Go2
 from mqe.envs.npc.go1_sheep import Go1Sheep
 from mqe.envs.npc.go1_object import Go1Object
 from mqe.envs.npc.go1_football_defender import Go1FootballDefender
@@ -8,6 +9,7 @@ from mqe.envs.npc.go1_football_defender import Go1FootballDefender
 # configs
 from mqe.envs.field.legged_robot_field_config import LeggedRobotFieldCfg
 from mqe.envs.configs.go1_plane_config import Go1PlaneCfg
+from mqe.envs.configs.go2_plane_config import Go2PlaneCfg
 from mqe.envs.configs.go1_gate_config import Go1GateCfg
 from mqe.envs.configs.go1_sheep_config import SingleSheepCfg, NineSheepCfg
 from mqe.envs.configs.go1_football_config import Go1FootballDefenderCfg, Go1Football1vs1Cfg, Go1Football2vs2Cfg
@@ -39,6 +41,11 @@ ENV_DICT = {
     "go1plane": {
         "class": Go1,
         "config": Go1PlaneCfg,
+        "wrapper": EmptyWrapper
+    },
+    "go2plane": {
+        "class": Go2,
+        "config": Go2PlaneCfg,
         "wrapper": EmptyWrapper
     },
     "go1gate": {

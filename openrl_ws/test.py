@@ -1,4 +1,7 @@
-import isaacgym
+try:
+    import isaacgym
+except ImportError:
+    import omni.isaac.lab as isaacgym
 from openrl_ws.utils import make_env, get_args, custom_cfg, MATWrapper
 
 from openrl.envs.common import make

@@ -1,7 +1,10 @@
 import gym
 from gym import spaces
 import numpy as np
-from isaacgym.torch_utils import get_euler_xyz
+try:
+    from isaacgym.torch_utils import get_euler_xyz
+except ImportError:
+    from omni.isaac.lab.torch_utils import get_euler_xyz
 import torch
 from copy import copy
 from mqe.envs.wrappers.empty_wrapper import EmptyWrapper

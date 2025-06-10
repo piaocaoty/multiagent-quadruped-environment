@@ -34,9 +34,11 @@ import torch
 import numpy as np
 import random
 from typing import Tuple
-from isaacgym import gymapi
-from isaacgym import gymutil
-from isaacgym.torch_utils import *
+from mqe.utils.isaac_import import gymapi, gymutil
+try:
+    from isaacgym.torch_utils import *
+except ImportError:
+    from omni.isaac.lab.torch_utils import *
 
 from mqe import LEGGED_GYM_ROOT_DIR, LEGGED_GYM_ENVS_DIR
 

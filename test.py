@@ -3,7 +3,10 @@ import numpy as np
 import os
 
 import imageio
-import isaacgym
+try:
+    import isaacgym
+except ImportError:
+    import omni.isaac.lab as isaacgym
 from mqe.utils import get_args
 import torch
 
